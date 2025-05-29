@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  color: #1A1A1A;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30,30,30,0.04);
+}
+.navbar-brand span {
+  color: #D72638;
+  font-size: 1.5rem;
+}
+.nav-link.active, .nav-link:hover {
+  color: #D72638 !important;
+  font-weight: 600;
+}
+
+.main-slider {
+  min-height: 60vh;
+  background: #D72638;
+}
+.slider-bg-1 {
+  background: url('cucuta-bg.jpg') center/cover no-repeat;
+}
+.slider-bg-2 {
+  background: url('venezuela-bg.jpg') center/cover no-repeat;
+}
+.slider-content h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.slider-content p {
+  font-size: 1.2rem;
+}
+
+.cta-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(215,38,56,0.08);
+}
+.cta-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(215,38,56,0.18);
+}
+
+.btn-danger, .btn-outline-danger {
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn-danger:hover, .btn-outline-danger:hover {
+  background: #1A1A1A;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(215,38,56,0.18);
+}
+
+.footer {
+  background: #1A1A1A;
+  color: #fff;
+}
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: #D72638;
+}
+
+.loader-bg {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(255,255,255,0.95);
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #D72638;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chatbot-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #D72638;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 16px rgba(215,38,56,0.18);
+  z-index: 1000;
+  transition: background 0.2s, transform 0.2s;
+}
+.chatbot-float:hover {
+  background: #1A1A1A;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .main-slider { min-height: 40vh; }
+  .slider-content h1 { font-size: 1.5rem; }
+  .chatbot-float { width: 48px; height: 48px; font-size: 1.3rem; bottom: 16px; right: 16px; }
+}
